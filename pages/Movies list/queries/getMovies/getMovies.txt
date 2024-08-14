@@ -1,3 +1,7 @@
-SELECT * FROM public."tmdb_movie" 
-WHERE release_date BETWEEN '{{FromDate.formattedDate}}' AND '{{ToDate.formattedDate}}'
-ORDER BY title LIMIT {{moviesTable.pageSize}} OFFSET {{(moviesTable.pageNo-1)*moviesTable.pageSize}};
+SELECT * FROM public."tmdb_movie"
+WHERE 
+  (('{{FromDate.formattedDate}}' IS NULL AND '{{ToDate.formattedDate}}' IS NULL) 
+   OR (release_date BETWEEN '{{FromDate.formattedDate}}' AND '{{ToDate.formattedDate}}'))
+ORDER BY title 
+LIMIT {{moviesTable.pageSize}} 
+OFFSET {{(moviesTable.pageNo-1)*moviesTable.pageSize}};

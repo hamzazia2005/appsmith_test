@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"tmdb_movie\" \nWHERE release_date BETWEEN '{{FromDate.formattedDate}}' AND '{{ToDate.formattedDate}}'\nORDER BY title LIMIT {{moviesTable.pageSize}} OFFSET {{(moviesTable.pageNo-1)*moviesTable.pageSize}};",
+      "body": "SELECT * FROM public.\"tmdb_movie\"\nWHERE \n  (('{{FromDate.formattedDate}}' IS NULL AND '{{ToDate.formattedDate}}' IS NULL) \n   OR (release_date BETWEEN '{{FromDate.formattedDate}}' AND '{{ToDate.formattedDate}}'))\nORDER BY title \nLIMIT {{moviesTable.pageSize}} \nOFFSET {{(moviesTable.pageNo-1)*moviesTable.pageSize}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
