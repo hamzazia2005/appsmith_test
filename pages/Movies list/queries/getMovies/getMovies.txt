@@ -1,7 +1,9 @@
 SELECT * FROM public."tmdb_movie"
 WHERE 
-  (('{{FromDate.formattedDate}}' IS NULL AND '{{ToDate.formattedDate}}' IS NULL) 
-   OR (release_date BETWEEN '{{FromDate.formattedDate}}' AND '{{ToDate.formattedDate}}'))
+  (('{{FromDate.formattedDate}}' IS NULL AND '{{ToDate.formattedDate}}' IS NULL)
+   OR (release_date BETWEEN 
+       COALESCE(NULLIF('{{FromDate.formattedDate}}', '')::date, '1900-01-01'::date) 
+       AND COALESCE(NULLIF('{{ToDate.formattedDate}}', '')::date, '9999-12-31'::date)))
 ORDER BY title 
 LIMIT {{moviesTable.pageSize}} 
 OFFSET {{(moviesTable.pageNo-1)*moviesTable.pageSize}};
