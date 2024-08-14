@@ -1,0 +1,5 @@
+UPDATE public.tmdb_movie
+SET title={{Input1.text}}, vote_average={{Input3.text}}, vote_count={{Input4.text}},status={{Input5.text}}, release_date={{moviesTable.selectedRow.release_date}}, revenue={{moviesTable.selectedRow.revenue}}, runtime={{moviesTable.selectedRow.runtime}}, adult={{moviesTable.selectedRow.adult}}, backdrop_path={{moviesTable.selectedRow.backdrop_path}}, budget={{moviesTable.selectedRow.budget}}, homepage={{moviesTable.selectedRow.homepage}}, imdb_id={{moviesTable.selectedRow.imdb_id}}, original_language={{moviesTable.selectedRow.original_language}}, original_title={{moviesTable.selectedRow.original_title}}, 
+overview={{moviesTable.selectedRow.overview}}, popularity={{moviesTable.selectedRow.popularity}}, 
+poster_path={{moviesTable.selectedRow.poster_path}}, genres={{moviesTable.selectedRow.genres}}, production_companies={{moviesTable.selectedRow.production_companies}}, production_countries={{moviesTable.selectedRow.production_countries}}, keywords={{moviesTable.selectedRow.keywords}}, 
+spoken_languages={{moviesTable.selectedRow.spoken_languages}} WHERE id={{moviesTable.selectedRow.id}}

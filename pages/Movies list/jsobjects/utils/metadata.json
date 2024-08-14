@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "66ba87ef667dca6e2c556fc6_7d34a1dd-3f5b-4acd-b7eb-3ac55fcbd36e",
+  "id": "Movies list_utils",
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Movies list",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

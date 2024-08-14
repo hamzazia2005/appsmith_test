@@ -1,0 +1,1 @@
+SELECT * FROM public."tmdb_movie" ORDER BY title LIMIT {{moviesTable.pageSize}} OFFSET {{(moviesTable.pageNo-1)*moviesTable.pageSize}};

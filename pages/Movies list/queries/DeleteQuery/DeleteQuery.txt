@@ -1,0 +1,2 @@
+DELETE FROM public."tmdb_movie"
+  WHERE "title" = {{data_table.triggeredRow.title}};

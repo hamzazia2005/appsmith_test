@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "66ba87ef667dca6e2c556fc6_4bba99da-e68c-4903-857f-eddf5f61720b",
+  "id": "Add Movies_readFile",
+  "unpublishedCollection": {
+    "name": "readFile",
+    "pageId": "Add Movies",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
