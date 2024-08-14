@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "66ba87ef667dca6e2c556fc6_9626a678-7c6c-4584-8baf-c9e4a4fb206a",
-  "id": "Movies list_getMovies",
+  "gitSyncId": "66ba87ef667dca6e2c556fc6_88eb19a1-1dfe-4829-935b-9a896c24db47",
+  "id": "Movies list_fromToFilter",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -10,10 +10,10 @@
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": false
+          "value": true
         }
       ],
-      "timeoutInMillisecond": 10000000
+      "timeoutInMillisecond": 10000
     },
     "confirmBeforeExecute": false,
     "datasource": {
@@ -27,8 +27,8 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "name": "getMovies",
+    "executeOnLoad": false,
+    "name": "fromToFilter",
     "pageId": "Movies list",
     "userSetOnLoad": false
   }

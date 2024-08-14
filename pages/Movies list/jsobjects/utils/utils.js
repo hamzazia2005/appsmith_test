@@ -7,7 +7,7 @@ export default {
 				showAlert("Values updated", "success")
 			}).catch(err => console.log("error in update many", err))
 		} else {
-			showAlert("Nothing to update", "error")
+			showAlert("Make sure to update the details first", "error")
 		}
 	},
 	
