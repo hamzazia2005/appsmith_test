@@ -15,11 +15,7 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClick"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -37,7 +33,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{updateQueryModal.run().then(() => {\n  getMovies.run();\n  closeModal('');\n  showAlert('Movie details updated', 'success');\n}).catch(() => {\n  showAlert('Something went wrong', 'error');\n});}}",
+  "onClick": "{{utils.updateModalValues();}}",
   "parentId": "pbwcwwz8w6",
   "placement": "CENTER",
   "recaptchaType": "V3",
